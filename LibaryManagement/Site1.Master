@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="LibaryManagement.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <!--bootstrap JS -->     
+    <script src="Bootstrap/bootstrap.bundle.min.js"></script>
+    <!--bootstrap css-->
+    <link href="Bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <!--DataTable css -->
+    <link href="DataTable/jquery.dataTables.min.css" rel="stylesheet" />
+    <!--DataTables JS-->
+    <script src="DataTable/jquery.dataTables.min.js"></script>
+    <!--FontAwesome css -->
+    <link href="FontAwesome/css/all.css" rel="stylesheet" />
+    <!--JQ-->
+    <script src="DataTable/jquery-3.6.0.js"></script>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4d0810;">
+                <a class="navbar-brand" href="#" style="margin-left:10px">
+                    <i class="fas fa-film" style="width:20px;height:20px;margin-right:5px"></i>
+                    
+                    myMovieDB
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav" style="margin-right:auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="HomePage.aspx">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" >Terms</a>
+                        </li>
+                    </ul>
+                    
+                    <ul class="navbar-nav" style="margin-right:10px">
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">View Movies</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                           <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">User Login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Sign Up</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" OnClick="LinkButton3_Click" Visible="False">Logout</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton5" runat="server" OnClick="LinkButton5_Click" Visible="False">Hello User</asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>             
+            </nav>
+        </div>
+        <!-- Main content place holder -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+       
+    </form>
+  
+</body>
+</html>
